@@ -1,0 +1,9 @@
+{
+  "appId": "com.tamsyra.alez",
+  "appName": "تمصيرة العز",
+  "webDir": "build",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  }
+}

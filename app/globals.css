@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme inline {
+    --font-sans: "Manrope", "Segoe UI", sans-serif;
+}
+
+:root {
+    --surface: #f6f2ea;
+    --sand: #ece1cf;
+    --night: #13232d;
+    --ink: #22313a;
+    --muted: #6d7169;
+    --line: rgba(19, 35, 45, 0.12);
+    --gold: #dbb153;
+    --gold-deep: #8e6a24;
+}
+
+@layer components {
+    @keyframes marqueeScroll {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+}
+
+@layer base {
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background: var(--surface);
+        color: var(--ink);
+        font-family: var(--font-manrope), "Segoe UI", sans-serif;
+    }
+
+    [dir="rtl"] {
+        font-family: var(--font-arabic), "Tahoma", sans-serif;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.text-balance {
+    text-wrap: balance;
+}
